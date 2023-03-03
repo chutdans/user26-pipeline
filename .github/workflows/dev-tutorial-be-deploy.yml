@@ -10,11 +10,11 @@ on:
         required: true
         default: "develop"
 
-  env:
+env:
   REPOSITORY: "chutdans/user26-tutorial-backend"
   GITREF: ${{ github.event_name == 'repository_dispatch' && 'develop' || github.event.inputs.ref }}
   ARTIFACT_NAME: "artifact-tutorial-be-0.0.1-snapshot"
-  APP_RESOURCE_NAME: app-user26-az-usw3-dev-001
+  APP_RESOURCE_NAME: app-<username>-az-<region>-dev-001
 
 jobs:
   build-app-service:
@@ -49,3 +49,6 @@ jobs:
       with:
         name: ${{ env.ARTIFACT_NAME }}
         path: '${{ github.workspace }}/Tutorial.Api/bin/Release/net6.0/${{ env.ARTIFACT_NAME }}.tar.gz'
+
+
+
