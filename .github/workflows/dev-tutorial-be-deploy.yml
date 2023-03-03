@@ -22,8 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: dev
-      steps:
-      - name: "Checkout project"
+    steps:
+    - name: "Checkout project"
       uses: actions/checkout@v2
       with:
         repository: ${{ env.REPOSITORY }}
@@ -49,6 +49,4 @@ jobs:
       with:
         name: ${{ env.ARTIFACT_NAME }}
         path: '${{ github.workspace }}/Tutorial.Api/bin/Release/net6.0/${{ env.ARTIFACT_NAME }}.tar.gz'
-
-
-
+  
