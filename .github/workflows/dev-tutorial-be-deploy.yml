@@ -23,7 +23,7 @@ jobs:
     environment:
       name: dev
       steps:
-    - name: "Checkout project"
+      - name: "Checkout project"
       uses: actions/checkout@v2
       with:
         repository: ${{ env.REPOSITORY }}
